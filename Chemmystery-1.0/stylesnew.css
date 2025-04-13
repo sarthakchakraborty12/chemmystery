@@ -1,0 +1,137 @@
+body {
+    background-color: #352C39;
+    color: #D3D3D3;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.game-container {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.game-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+    font-size: 1.2em;
+}
+
+.periodic-table {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    gap: 2px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.element-box {
+    border: 2px solid #D3D3D3;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    user-select: none;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: bold;
+    background-color: #564F5E;
+    font-size: 0.9em;
+}
+
+.element-box:hover {
+    background-color: #6B6476;
+}
+
+.element-box.correct {
+    background-color: rgba(0, 255, 0, 0.3);
+    border-color: #00FF00;
+}
+
+.element-box.incorrect {
+    background-color: rgba(255, 0, 0, 0.3);
+    border-color: #FF0000;
+    animation: shake 0.5s;
+}
+
+.element-box.dragging {
+    opacity: 0.8;
+    z-index: 100;
+}
+
+.element-box.s {
+    color: #FF9966;
+}
+
+.element-box.p {
+    color: #99CCFF;
+}
+
+.element-box.d {
+    color: #FFFF99;
+}
+
+.element-box.f {
+    color: #FF99CC;
+}
+
+.spacer {
+    grid-column: span 1;
+    height: 50px;
+}
+
+.lanthanide-actinide-spacer {
+    height: 20px;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #443C49;
+    border: 3px solid #D3D3D3;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    min-width: 300px;
+}
+
+.popup button {
+    background-color: #ffc400;
+    color: #010101;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 1rem;
+}
+
+.popup button:hover {
+    background-color: #8A8290;
+}
+
+.stopwatch {
+    margin: 20px 0;
+    font-size: 1.5em;
+    font-family: monospace;
+}
+
+@font-face {
+    font-family: 'FunkyFont';
+    src: url('/fonts/Urban Heroes.ttf') format('truetype');
+}

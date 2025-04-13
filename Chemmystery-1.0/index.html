@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta data-rh = "true" property = "og.image" content = "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAEIzDX56c8TFs4FVi_Dy8IUZxwxc8c0E6kmw5HUfEWmpuYbbe7R7rrPjy-jj5g06ggEUUcnDlI0-jq8NVvXIWGWOTOSsYpNdXg8MTEESmMSqysJS4H6Ig4LUK1fuvRQbraB3hJY7NnBzPbKFFZEvDeYlUVGgY_3S3mAJwq48VzVJf9L4cny1AcJUoLvY/s1600/chemmysterylinkpreview.png">
+
+    <meta property="og:image" itemprop="image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAEIzDX56c8TFs4FVi_Dy8IUZxwxc8c0E6kmw5HUfEWmpuYbbe7R7rrPjy-jj5g06ggEUUcnDlI0-jq8NVvXIWGWOTOSsYpNdXg8MTEESmMSqysJS4H6Ig4LUK1fuvRQbraB3hJY7NnBzPbKFFZEvDeYlUVGgY_3S3mAJwq48VzVJf9L4cny1AcJUoLvY/s1600/chemmysterylinkpreview.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="https://chemmystery.netlify.app/">
+
+
+
+    <link rel="stylesheet" href="styleslanding.css">
+    <link rel="icon" href="Chem-Mystery-Favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Chem-Mystery</title>
+    <style>
+        .element-box {
+            border: 2px solid #D3D3D3;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: grab;
+            user-select: none;
+            transition: all 0.3s ease;
+            position: relative;
+            font-weight: bold;
+            background-color: #564F5E;
+            font-size: 0.8em;
+            margin: 5px;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        .element-box.correct {
+            background-color: rgba(0, 255, 0, 0.3);
+            border-color: #00FF00;
+        }
+
+        .element-box.incorrect {
+            background-color: rgba(255, 0, 0, 0.3);
+            border-color: #FF0000;
+        }
+
+        .nickname-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        .element-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        h1 {
+            font-size: 3.0em;
+            text-align: center;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        .element-container {
+            transform: scale(0.7);
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.8em;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.3);
+            opacity: 1; /* Added opacity: 1 */
+            user-select: auto; /* Override user-select: none for footer */
+        }
+
+        .footer a {
+            color: #00C8FF;
+            text-decoration: underline;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        body {
+            background-color: #352C39;
+            background-image: url("treasure box filled with bickers, test tubes, ampules and chemistry gears outlined illustration white in black, no other object besides the box.png");
+            background-blend-mode: overlay;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            user-select: none;
+            position: relative;
+            min-height: 100vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container, #start-button, h1, p, input {
+            position: relative;
+            z-index: 1;
+            opacity: 1; /* Added opacity: 1 */
+        }
+
+        /* Media query for responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.0em;
+            }
+            .element-box {
+                height: 30px;
+                width: 30px;
+                font-size: 0.7em;
+            }
+            .element-container {
+                transform: scale(0.5);
+            }
+            .footer {
+                font-size: 0.7em;
+            }
+
+            .nickname-section p {
+                font-size: 0.9em;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHEM - MYSTERY</h1>
+        <div class="nickname-section">
+            <div class = "element-container">
+                <div class="element-box correct">Cu</div>
+                <div class="element-box incorrect">S</div>
+                <div class="element-box correct">T</div>
+                <div class="element-box incorrect">O</div>
+                <div class="element-box correct">M</div>
+            </div>
+            <input type="text" id="nickname" placeholder="Enter your nickname">
+            <p>The periodic table will be shuffled, and you have to drag the elements to the right place. <br> Your challenge is to sort the elements with least numbers of moves possible. <br> Sharpen your Chemistry knowledge on periodic table, in a playful way!</p>
+        </div>
+        <button id="start-button">Start</button>
+    </div>
+    <div class="footer">
+        Made with 💖 by <a href="https://www.linkedin.com/in/soumalika-chakraborty-1a01061b5?utm_source=share&utm_campaign=share_via&utm_content=profile" target="_blank">Soumalika</a>, <a href="https://www.linkedin.com/in/sarthakchakraborty12/" target="_blank">Sarthak</a> and <a href="https://www.linkedin.com/in/subhajit-mondal-85946328b/" target="_blank">Subhajit</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

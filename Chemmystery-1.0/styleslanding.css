@@ -1,0 +1,80 @@
+body {
+
+    background-color: #352C39;
+
+    color: #D3D3D3; /* Light color for text */
+
+    font-family: "Montserrat", sans-serif;
+
+    text-align: center;
+
+}
+
+
+.container {
+
+    padding: 50px;
+
+}
+
+
+.nickname-section {
+
+    margin: 20px 0;
+
+}
+
+
+input {
+
+    padding: 10px;
+
+    font-size: 16px;
+
+}
+
+
+button {
+
+    padding: 10px 20px;
+
+    background-color: #ffc400; /* Light sap green */
+
+    color: #000000;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-family: "Montserrat", sans-serif;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background-color: #DDFF00; /* Darker green */
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+input {
+    border-radius: 8px;
+}
+
+h1 {
+    font-family: 'FunkyFont';
+    background-image: linear-gradient(to left,#ffc400,#DDFF00 );
+    color: transparent;
+    background-clip: text;
+}
+
+@font-face {
+    font-family: 'FunkyFont';
+    src: url('/fonts/Urban Heroes.ttf') format('truetype');
+}
